@@ -49,10 +49,22 @@ feature -- Predefined city objects
 			Result := Zurich.station ("Bahnhofplatz/HB")
 		end
 
+	Bahnhofplatz_HB_view: STATION_VIEW
+			-- View of station "Banhofplatz/HB".
+			do
+				Result := Zurich_map.station_view (bahnhofplatz_hb)
+			end
+
 	Central: STATION
 			-- Station "Central".
 		do
 			Result := Zurich.station ("Central")
+		end
+
+	Central_view: STATION_VIEW
+			-- View of station "Central".
+		do
+			Result := Zurich_map.station_view (Central)
 		end
 
 	ETH_Universitaetsspital: STATION
@@ -61,10 +73,22 @@ feature -- Predefined city objects
 			Result := Zurich.station ("ETH/Universitaetsspital")
 		end
 
+	ETH_Universitaetsspital_view: STATION_VIEW
+			-- View of station "ETH/Universitaetsspital".
+		do
+			Result := Zurich_map.station_view (ETH_Universitaetsspital)
+		end
+
 	Haldenbach: STATION
 			-- Station "Haldenbach".
 		do
 			Result := Zurich.station ("Haldenbach")
+		end
+
+	Haldenbach_view: STATION_VIEW
+			-- View of station "Haldenbach"
+		do
+			Result := Zurich_map.station_view (Haldenbach)
 		end
 
 	Haldenegg: STATION
@@ -73,16 +97,34 @@ feature -- Predefined city objects
 			Result := Zurich.station ("Haldenegg")
 		end
 
+	Haldenegg_view: STATION_VIEW
+			-- View of station "Haldenegg".
+		do
+			Result := Zurich_map.station_view (Haldenegg)
+		end
+
 	Opernhaus: STATION
 			-- Station "Opernhaus".
 		do
 			Result := Zurich.station ("Opernhaus")
 		end
 
+	Opernhaus_view: STATION_VIEW
+			-- View of station "Opernhaus".
+		do
+			Result := Zurich_map.station_view (Opernhaus)
+		end
+
 	Polyterrasse: STATION
 			-- Station "Polyterrasse".
 		do
 			Result := Zurich.station ("Polyterrasse")
+		end
+
+	Polyterrasse_view: STATION_VIEW
+			-- View of station "Polyterrasse".
+		do
+			Result := Zurich_map.station_view (Polyterrasse)
 		end
 
 	Polybahn_line_number: INTEGER = 24
@@ -94,10 +136,22 @@ feature -- Predefined city objects
 			Result := Zurich.line (Polybahn_line_number)
 		end
 
+	Polybahn_view: LINE_VIEW
+			-- View of line 24.
+		do
+			Result := Zurich_map.line_view (Polybahn)
+		end
+
 	Line4: LINE
 			-- Line 4.
 		do
 			Result := Zurich.line (4)
+		end
+
+	Line4_view: LINE_VIEW
+			-- View of line 4.
+		do
+			Result := Zurich_map.line_view (Line4)
 		end
 
 	Line10: LINE
@@ -106,22 +160,10 @@ feature -- Predefined city objects
 			Result := Zurich.line (10)
 		end
 
-	Central_view: STATION_VIEW
-			-- View of station "Central".
+	Line10_view: LINE_VIEW
+			-- View of line 10.
 		do
-			Result := Zurich_map.station_view (Central)
-		end
-
-	Polyterrasse_view: STATION_VIEW
-			-- View of station "Polyterrasse".
-		do
-			Result := Zurich_map.station_view (Polyterrasse)
-		end
-
-	Polybahn_view: LINE_VIEW
-			-- View of line 24.
-		do
-			Result := Zurich_map.line_view (Polybahn)
+			Result := Zurich_map.line_view (Line10)
 		end
 
 feature {NONE} -- Parameters
